@@ -25,9 +25,13 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
-            ],
-            "scripts": []
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/@fortawesome/fontawesome-free/css/all.min.css"
+            ],            
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]            
           },
           "configurations": {
             "production": {
@@ -58,6 +62,9 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "my-app:build"
+          },
           "configurations": {
             "production": {
               "browserTarget": "mi-desarrollo:build:production"
@@ -94,5 +101,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "ffa71db8-c0a0-4e8a-81aa-1988510eaf70"
   }
 }

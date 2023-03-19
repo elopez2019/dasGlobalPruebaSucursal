@@ -1,0 +1,33 @@
+<br>
+<div class="container">
+<h1>Sucursales</h1>
+  <br>
+
+<table class="table" style="flex: 1;">
+  <thead>
+    <tr>
+      <th scope="col">Nombre</th>
+      <th scope="col">Telefono</th>
+      <th scope="col">Direccion</th>
+      <th scope="col">Empresa</th>
+      <th scope="col">Opciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let sucursal of sucursales">
+      <td>{{ sucursal.nombre }}</td>
+      <td>{{ sucursal.telefono }}</td>
+      <td>{{ sucursal.direccion }}</td>
+      <td>{{ sucursal.empresa_id }}</td>
+      <td>
+        <button class="btn btn-primary btn-sm"  (click)="editSucursal(sucursal)">
+          <i class="bi bi-pencil-square">Editar</i>
+        </button>
+        <button type="butto" class="btn btn-danger btn-sm"  (click)="deleteSucursal(sucursal)">
+          <i  class="bi bi-trash">Eliminar</i>
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>
